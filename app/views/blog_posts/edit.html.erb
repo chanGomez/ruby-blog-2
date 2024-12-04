@@ -1,0 +1,9 @@
+<h1> edit</h1>
+
+<%= render partial: "form", locals: {blog_post: @blog_post} %>
+<%
+=begin%>
+turbo for the line below is built in javascript in rails
+<%
+=end%>
+<%= button_to "Delete", @blog_post, method: :delete, data: {turbo_confirm: "Are you sure?"}%>

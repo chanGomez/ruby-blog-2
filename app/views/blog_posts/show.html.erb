@@ -1,0 +1,11 @@
+<%
+=begin%>
+- link_to: is a link tag
+- edit_blog_post_path: come from the routes.rb file "resources :blog_posts". under the hood a edit path is made and rails created this naming for you
+- user_signed_in: is a helper that comes with devise
+<%
+=end%>
+<%= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
+<h1><%=@blog_post.title%></h1>
+
+<%= @blog_post.body%>
